@@ -22,7 +22,7 @@ const Home = () => {
                 Alberto <span>Márquez</span>
               </h3>
               <p className="job font-montserrat font-medium max-w-[450px] mb-[25px]">
-                I am a Chemical engineer.
+                Hi, welcome to my personal official website!
               </p>
             </div>
           </div>
