@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import Link from "next/link";
 const Intro = () => {
   return (
     <Fragment>
@@ -7,7 +8,7 @@ const Intro = () => {
       </div>
       <div className="about_title w-full h-auto clear-both float-left border-solid border-[#DFDFDF] border-b pb-[20px] mb-[30px]">
         <h3 className="text-[22px] font-bold">Alberto Márquez</h3>
-        <span>Chemical Engineer | Sales & Account Manager | Plastics Expert |  Web Developer | Startup inverstor</span>
+        <span>Chemical Engineer | Sales & Account Manager | Plastics Expert |  Web Developer | Startup investor</span>
       </div>
       <div className="about_text w-full h-auto clear-both float-left border-solid border-[#DFDFDF] border-b pb-[31px] mb-[30px]">
         <p className="mb-[11px]" align="justify">
@@ -22,13 +23,17 @@ const Intro = () => {
         <br/>
         My expertise spans across diverse industries, including Electrical and Electronics, Automotive, Insulation, and Construction.
         <br/>
-        In recent years, I have also developed a passion for web development. I have completed projects utilizing Javascript/Typescript and AWS cloud solutions, showcasing my skills and commitment to continuous learning. You can explore my work on my GitHub profile: https://github.com/mamertmg.
+        <br/>
+        In recent years, I have also developed a passion for web development. I have completed projects utilizing Javascript/Typescript and AWS cloud solutions, showcasing my skills and commitment to continuous learning. You can explore my work on my <a className="font-black" href="https://github.com/mamertmg">Github</a> profile.
+        <br/>
+        <br />
+        Additionally, as an early startup investor, I seek out ideas and passionate entrepreneurs to support. I like to evaluate business ideas I consider investing in and that align with my interests and expertise in sustainability, digitalization and circular economy.
         <br/>
         <br />
         Let's connect and explore opportunities to leverage my experience in driving sales, fostering sustainability, and contributing to the growth of innovative industries.
         <br/>
         <br/>
-        #Sales #Polymers #Sustainability #CircularEconomy #WebDevelopment
+        #Sales #Polymers #Sustainability #CircularEconomy #WebDevelopment #Startups
         </p>
       </div>
       <div className="tokyo_tm_short_info w-full h-auto clear-both float-left flex border-solid border-[#DFDFDF] border-b pb-[30px] mb-[40px]">
@@ -51,7 +56,7 @@ const Intro = () => {
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
                   Address:
                 </span>
-                <span>Meerbusch, Düsseldorf (Germany)</span>
+                <span>Meerbusch, Düsseldorf</span>
               </li>
               <li className="m-0">
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">

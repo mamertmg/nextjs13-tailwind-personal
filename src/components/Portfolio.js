@@ -1,86 +1,13 @@
 import Isotope from "isotope-layout";
-import { useContext, useEffect, useRef, useState } from "react";
-import { TokyoContext } from "../Context";
+import { useEffect, useRef, useState } from "react";
 import { tokyo } from "../utils";
 import SectionContainer from "./SectionContainer";
 import SectionTitle from "./SectionTitle";
-const detailData = [
-  {
-    id: 1,
-    thumbnail: "assets/img/portfolio/7.jpg",
-    title: "Selena Gomez",
-    text: [
-      "We live in a world where we need to move quickly and iterate on our ideas as flexibly as possible. Building mockups strikes the ideal balance between true-life representation of the end product and ease of modification.",
-      "Mockups are useful both for the creative phase of the project - for instance when you're trying to figure out your user flows or the proper visual hierarchy - and the production phase when they will represent the target product. Making mockups a part of your creative and development process allows you to quickly and easily ideate.",
-    ],
-    client: "Alvaro Morata",
-    date: "October 22, 2022",
-    category: "Detail",
-    share: [
-      {
-        id: 1,
-        iconName: "icon-facebook-squared",
-        link: "https://www.facebook.com/",
-      },
-      {
-        id: 2,
-        iconName: "icon-twitter-squared",
-        link: "https://twitter.com/",
-      },
-      {
-        id: 3,
-        iconName: "icon-behance-squared",
-        link: "https://www.behance.net/",
-      },
-      {
-        id: 4,
-        iconName: "icon-linkedin-squared",
-        link: "https://www.linkedin.com/",
-      },
-    ],
-    bigImage: "assets/img/portfolio/1.jpg",
-    images: ["assets/img/portfolio/2.jpg", "assets/img/portfolio/3.jpg"],
-  },
-  {
-    id: 2,
-    thumbnail: "assets/img/portfolio/8.jpg",
-    title: "Ave Simone",
-    text: [
-      "We live in a world where we need to move quickly and iterate on our ideas as flexibly as possible. Building mockups strikes the ideal balance between true-life representation of the end product and ease of modification.",
-      "Mockups are useful both for the creative phase of the project - for instance when you're trying to figure out your user flows or the proper visual hierarchy - and the production phase when they will represent the target product. Making mockups a part of your creative and development process allows you to quickly and easily ideate.",
-    ],
-    client: "Alvaro Morata",
-    date: "October 22, 2022",
-    category: "Detail",
-    share: [
-      {
-        id: 1,
-        iconName: "icon-facebook-squared",
-        link: "https://www.facebook.com/",
-      },
-      {
-        id: 2,
-        iconName: "icon-twitter-squared",
-        link: "https://twitter.com/",
-      },
-      {
-        id: 3,
-        iconName: "icon-behance-squared",
-        link: "https://www.behance.net/",
-      },
-      {
-        id: 4,
-        iconName: "icon-linkedin-squared",
-        link: "https://www.linkedin.com/",
-      },
-    ],
-    bigImage: "assets/img/portfolio/1.jpg",
-    images: ["assets/img/portfolio/2.jpg", "assets/img/portfolio/3.jpg"],
-  },
-];
+
 const Portfolio = () => {
   const isotope = useRef();
   const [filterKey, setFilterKey] = useState("*");
+
   useEffect(() => {
     const data = document.querySelector(".item__");
     if (data.length !== 0) {
@@ -91,6 +18,7 @@ const Portfolio = () => {
       }, 3000);
     }
   }, []);
+
   useEffect(() => {
     if (isotope.current) {
       filterKey === "*"
@@ -98,14 +26,16 @@ const Portfolio = () => {
         : isotope.current.arrange({ filter: `.${filterKey}` });
     }
   }, [filterKey]);
+
   const handleFilterKeyChange = (key) => () => {
     setFilterKey(key);
   };
+
   useEffect(() => {
     tokyo.portfolioHover();
     tokyo.dataImage();
   });
-  const { setPortfolioDetailsModal, modalToggle } = useContext(TokyoContext);
+
   return (
     <SectionContainer name={"portfolio"}>
       <div className="container">
@@ -114,66 +44,9 @@ const Portfolio = () => {
             <div className="title_flex w-full h-auto clear-both flex justify-between items-end">
               <SectionTitle
                 pageName={"Portfolio"}
-                title={"Creative Portfolio"}
+                title={"Web development Portfolio"}
               />
-              <div className="portfolio_filter">
-                <ul className="list-none">
-                  <li className="mr-[25px] inline-block">
-                    <a
-                      href="#"
-                      className="current text-[#767676] inline-block font-medium font-montserrat transition-all duration-300 hover:text-black"
-                      onClick={handleFilterKeyChange("*")}
-                    >
-                      All
-                    </a>
-                  </li>
-                  <li className="mr-[25px] inline-block">
-                    <a
-                      className="text-[#767676] inline-block font-medium font-montserrat transition-all duration-300 hover:text-black"
-                      href="#"
-                      onClick={handleFilterKeyChange("vimeo")}
-                    >
-                      Vimeo
-                    </a>
-                  </li>
-                  <li className="mr-[25px] inline-block">
-                    <a
-                      className="text-[#767676] inline-block font-medium font-montserrat transition-all duration-300 hover:text-black"
-                      href="#"
-                      onClick={handleFilterKeyChange("youtube")}
-                    >
-                      Youtube
-                    </a>
-                  </li>
-                  <li className="mr-[25px] inline-block">
-                    <a
-                      className="text-[#767676] inline-block font-medium font-montserrat transition-all duration-300 hover:text-black"
-                      href="#"
-                      onClick={handleFilterKeyChange("soundcloud")}
-                    >
-                      Soundcloud
-                    </a>
-                  </li>
-                  <li className="mr-[25px] inline-block">
-                    <a
-                      className="text-[#767676] inline-block font-medium font-montserrat transition-all duration-300 hover:text-black"
-                      href="#"
-                      onClick={handleFilterKeyChange("image")}
-                    >
-                      Image
-                    </a>
-                  </li>
-                  <li className="inline-block">
-                    <a
-                      className="text-[#767676] inline-block font-medium font-montserrat transition-all duration-300 hover:text-black"
-                      href="#"
-                      onClick={handleFilterKeyChange("detail")}
-                    >
-                      Detail
-                    </a>
-                  </li>
-                </ul>
-              </div>
+
             </div>
           </div>
           <div className="list_wrapper w-full h-auto clear-both float-left">
@@ -182,146 +55,125 @@ const Portfolio = () => {
                 <div className="inner w-full h-auto clear-both float-left overflow-hidden relative">
                   <div
                     className="entry tokyo_tm_portfolio_animation_wrap"
-                    data-title="Teresa Butler"
-                    data-category="Vimeo"
+                    data-title="Modern UI and UX"
+                    data-category="Landing page"
                   >
-                    <a
-                      className="popup-vimeo"
-                      href="https://vimeo.com/337293658"
-                    >
+                    <a href="https://restaurant-website-lime.vercel.app">
                       <img
                         className="opacity-0 min-w-full"
-                        src="assets/img/thumbs/1-1.jpg"
+                        src="assets/img/thumbs/40-25.jpg"
                         alt="image"
                       />
                       <div
                         className="abs_image absolute inset-0 bg-no-repeat bg-cover bg-center transition-all duration-300"
-                        data-img-url="assets/img/portfolio/5.jpg"
+                        data-img-url="assets/img/portfolio/restaurant-landingpage.png"
                       />
                     </a>
                   </div>
                 </div>
               </li>
-              <li className="youtube mb-[40px] float-left w-1/3 pl-[40px] item__">
+              <li className="mb-[40px] float-left w-1/3 pl-[40px] item__">
                 <div className="inner w-full h-auto clear-both float-left overflow-hidden relative">
                   <div
                     className="entry tokyo_tm_portfolio_animation_wrap"
-                    data-title="Ashley Flores"
-                    data-category="Youtube"
+                    data-title="React, Sanity and Stripe"
+                    data-category="E-commerce"
                   >
                     <a
-                      className="popup-youtube"
-                      href="https://www.youtube.com/watch?v=7e90gBu4pas"
+                      href="https://ecommerce-sanity-stripe-nu-ten.vercel.app"
                     >
                       <img
                         className="opacity-0 min-w-full"
-                        src="assets/img/thumbs/1-1.jpg"
+                        src="assets/img/thumbs/40-25.jpg"
                         alt="image"
                       />
                       <div
                         className="abs_image absolute inset-0 bg-no-repeat bg-cover bg-center transition-all duration-300"
-                        data-img-url="assets/img/portfolio/6.jpg"
+                        data-img-url="assets/img/portfolio/ecommerce.png"
                       />
                     </a>
                   </div>
                 </div>
               </li>
-              <li className="soundcloud mb-[40px] float-left w-1/3 pl-[40px] item__">
+              <li className="mb-[40px] float-left w-1/3 pl-[40px] item__">
                 <div className="inner w-full h-auto clear-both float-left overflow-hidden relative">
                   <div
                     className="entry tokyo_tm_portfolio_animation_wrap"
-                    data-title="Derek Smith"
-                    data-category="Soundcloud"
+                    data-title="React, TailwindCSS and Context hook"
+                    data-category="E-commerce"
                   >
-                    <a
-                      className="soundcloude_link mfp-iframe audio"
-                      href="https://w.soundcloud.com/player/?visual=true&url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F159967086&show_artwork=true&maxwidth=1020&maxheight=1000&auto_play=1"
-                    >
+                    <a href="https://ecommerce-shop-seven.vercel.app/">
                       <img
                         className="opacity-0 min-w-full"
-                        src="assets/img/thumbs/1-1.jpg"
+                        src="assets/img/thumbs/40-25.jpg"
                         alt="image"
                       />
                       <div
                         className="abs_image absolute inset-0 bg-no-repeat bg-cover bg-center transition-all duration-300"
-                        data-img-url="assets/img/portfolio/4.jpg"
+                        data-img-url="assets/img/portfolio/shop-ecommerce.png"
                       />
                     </a>
                   </div>
                 </div>
               </li>
-              <li className="image mb-[40px] float-left w-1/3 pl-[40px] item__">
+              <li className="mb-[40px] float-left w-1/3 pl-[40px] item__">
                 <div className="inner w-full h-auto clear-both float-left overflow-hidden relative">
                   <div
                     className="entry tokyo_tm_portfolio_animation_wrap"
-                    data-title="Gloria Jenkins"
-                    data-category="Image"
+                    data-title="React and TailwindCSS"
+                    data-category="Landing page"
                   >
-                    <a className="zoom" href="assets/img/portfolio/3.jpg">
+                    <a href="https://gym-landing-page-puce.vercel.app">
                       <img
                         className="opacity-0 min-w-full"
-                        src="assets/img/thumbs/1-1.jpg"
+                        src="assets/img/thumbs/40-25.jpg"
                         alt="image"
                       />
                       <div
                         className="abs_image absolute inset-0 bg-no-repeat bg-cover bg-center transition-all duration-300"
-                        data-img-url="assets/img/portfolio/3.jpg"
+                        data-img-url="assets/img/portfolio/gym-landingpage.png"
                       />
                     </a>
                   </div>
                 </div>
               </li>
-              <li className="detail mb-[40px] float-left w-1/3 pl-[40px] item__">
-                <div className="inner w-full h-auto clear-both float-left overflow-hidden relative">
+              <li className="mb-[40px] float-left w-1/3 pl-[40px] item__">
+                <div className="inner w-full h-[250px] clear-both float-left overflow-hidden relative">
                   <div
                     className="entry tokyo_tm_portfolio_animation_wrap"
-                    data-title="Selena Gomez"
-                    data-category="Detail"
+                    data-title="React and TailwindCSS"
+                    data-category="Landing page"
                   >
-                    <a
-                      className="popup_info"
-                      href="#"
-                      onClick={() => {
-                        setPortfolioDetailsModal(detailData[0]);
-                        modalToggle(true);
-                      }}
-                    >
+                    <a href="https://github-search-gamma-olive.vercel.app/">
                       <img
                         className="opacity-0 min-w-full"
-                        src="assets/img/thumbs/1-1.jpg"
+                        src="assets/img/thumbs/40-25.jpg"
                         alt="image"
                       />
                       <div
                         className="abs_image absolute inset-0 bg-no-repeat bg-cover bg-center transition-all duration-300"
-                        data-img-url="assets/img/portfolio/7.jpg"
+                        data-img-url="assets/img/portfolio/github-search.png"
                       />
                     </a>
                   </div>
                 </div>
               </li>
-              <li className="detail mb-[40px] float-left w-1/3 pl-[40px] item__">
-                <div className="inner w-full h-auto clear-both float-left overflow-hidden relative">
+              <li className="mb-[40px] float-left w-1/3 pl-[40px] item__">
+                <div className="inner w-full h-[250px] clear-both float-left overflow-hidden relative">
                   <div
                     className="entry tokyo_tm_portfolio_animation_wrap"
-                    data-title="Ave Simone"
-                    data-category="Detail"
+                    data-title="NextJS and Markdown"
+                    data-category="Blog"
                   >
-                    <a
-                      className="popup_info"
-                      href="#"
-                      onClick={() => {
-                        setPortfolioDetailsModal(detailData[1]);
-                        modalToggle(true);
-                      }}
-                    >
+                    <a href="https://blog-markdown-plum.vercel.app">
                       <img
                         className="opacity-0 min-w-full"
-                        src="assets/img/thumbs/1-1.jpg"
+                        src="assets/img/thumbs/40-25.jpg"
                         alt="image"
                       />
                       <div
                         className="abs_image absolute inset-0 bg-no-repeat bg-cover bg-center transition-all duration-300"
-                        data-img-url="assets/img/portfolio/8.jpg"
+                        data-img-url="assets/img/portfolio/blog-markdown.png"
                       />
                     </a>
                   </div>

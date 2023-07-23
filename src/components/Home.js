@@ -1,26 +1,5 @@
 import SectionContainer from "./SectionContainer";
-const socialIcon = [
-  {
-    id: 1,
-    iconName: "icon-facebook-squared",
-    link: "https://www.facebook.com/",
-  },
-  {
-    id: 2,
-    iconName: "icon-twitter-squared",
-    link: "https://twitter.com/",
-  },
-  {
-    id: 3,
-    iconName: "icon-behance-squared",
-    link: "https://www.behance.net/",
-  },
-  {
-    id: 4,
-    iconName: "icon-linkedin-squared",
-    link: "https://www.linkedin.com/",
-  },
-];
+
 const Home = () => {
   return (
     <SectionContainer name={"home"}>
@@ -40,26 +19,11 @@ const Home = () => {
             </div>
             <div className="details ml-[80px]">
               <h3 className="name text-[55px] font-extrabold uppercase mb-[14px]">
-                Alberto <span>Marquez</span>
+                Alberto <span>Márquez</span>
               </h3>
               <p className="job font-montserrat font-medium max-w-[450px] mb-[25px]">
                 I am a Chemical engineer.
               </p>
-              <div className="social w-full float-left">
-                <ul className="m-0 list-none">
-                  {socialIcon.map((item) => (
-                    <li className="mr-[8px] inline-block" key={item.id}>
-                      <a
-                        className="text-black text-[20px] transition-all duration-300 hover:text-black"
-                        href={item.link}
-                        target="_blank"
-                      >
-                        <i className={item.iconName} />
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </div>
           </div>
         </div>

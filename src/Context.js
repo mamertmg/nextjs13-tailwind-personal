@@ -30,7 +30,7 @@ const initialState = {
   newsModal: null,
   portfolioDetailsModal: null,
   menus: [
-    { id: 1, name: "Home", href: "home" },
+    { id: 1, name: "home", href: "home" },
     { id: 2, name: "about", href: "about" },
     { id: 3, name: "services", href: "services" },
     { id: 4, name: "portfolio", href: "portfolio" },
