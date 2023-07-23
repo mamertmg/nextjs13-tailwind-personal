@@ -7,20 +7,28 @@ const Intro = () => {
       </div>
       <div className="about_title w-full h-auto clear-both float-left border-solid border-[#DFDFDF] border-b pb-[20px] mb-[30px]">
         <h3 className="text-[22px] font-bold">Alberto Márquez</h3>
-        <span>Web Developer</span>
+        <span>Chemical Engineer | Sales & Account Manager | Plastics Expert |  Web Developer | Startup inverstor</span>
       </div>
       <div className="about_text w-full h-auto clear-both float-left border-solid border-[#DFDFDF] border-b pb-[31px] mb-[30px]">
-        <p className="mb-[11px]">
-          Hi, my name is Adriano Smith and I began using WordPress when it first
-          began. I’ve spent most of my waking hours for the last ten years
-          designing, programming and operating WordPress sites.
-        </p>
-        <p>
-          One of my specialties is taking an idea from scratch and creating a
-          full-fledged platform. I go beyond to produce sites with a unique,
-          outstanding, contemporary look-and-feel. With extensive knowledge of
-          web mechanics, I’m able to optimize complex integrations to require
-          little-to-no maintenance while running on their own for years.
+        <p className="mb-[11px]" align="justify">
+          Hi, my name is Alberto Márquez and I am a sales-driven professional with over 15 years of experience in the plastics / polymers industry. I have held various roles in technical application, sales and account management, and business development in international B2B markets.
+        <br/>
+        <br/>
+        With a strong technical background and extensive international business experience, I have successfully collaborated in cross-functional global teams. My focus has been on driving the chemical industry and end customers towards sustainability by reducing carbon footprint through the use of renewable feedstocks and promoting circular economy principles through chemical and mechanical recycling (PCR and PIR).
+        <br/>
+        <br/>
+        I possess in-depth knowledge of various polymers, including Polyurethanes (PU), Polycarbonates (PC), PBT, PP, PE, PS, POM, PMMA, and ABS. 
+        <br/>
+        <br/>
+        My expertise spans across diverse industries, including Electrical and Electronics, Automotive, Insulation, and Construction.
+        <br/>
+        In recent years, I have also developed a passion for web development. I have completed projects utilizing Javascript/Typescript and AWS cloud solutions, showcasing my skills and commitment to continuous learning. You can explore my work on my GitHub profile: https://github.com/mamertmg.
+        <br/>
+        <br />
+        Let's connect and explore opportunities to leverage my experience in driving sales, fostering sustainability, and contributing to the growth of innovative industries.
+        <br/>
+        <br/>
+        #Sales #Polymers #Sustainability #CircularEconomy #WebDevelopment
         </p>
       </div>
       <div className="tokyo_tm_short_info w-full h-auto clear-both float-left flex border-solid border-[#DFDFDF] border-b pb-[30px] mb-[40px]">
@@ -31,19 +39,19 @@ const Intro = () => {
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
                   Birthday:
                 </span>
-                <span>01.07.1990</span>
+                <span>15.02.1984</span>
               </li>
               <li className="m-0">
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
-                  Age:
+                  Birthplace:
                 </span>
-                <span>32</span>
+                <span>Barcelona</span>
               </li>
               <li className="m-0">
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
                   Address:
                 </span>
-                <span>Ave 11, New York, USA</span>
+                <span>Meerbusch, Düsseldorf (Germany)</span>
               </li>
               <li className="m-0">
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
@@ -52,9 +60,9 @@ const Intro = () => {
                 <span>
                   <a
                     className="text-[#767676] transition-all duration-300 hover:text-black"
-                    href="mailto:tokyo@gmail.com"
+                    href="mailto:marquezgarcia.a@gmail.com"
                   >
-                    tokyo@gmail.com
+                    marquezgarcia.a@gmail.com
                   </a>
                 </span>
               </li>
@@ -65,9 +73,9 @@ const Intro = () => {
                 <span>
                   <a
                     className="text-[#767676] transition-all duration-300 hover:text-black"
-                    href="tel:+77 022 177 05 05"
+                    href="tel:+49 176 325 176 93"
                   >
-                    +77 022 177 05 05
+                    +49 176 325 176 93
                   </a>
                 </span>
               </li>
@@ -81,25 +89,25 @@ const Intro = () => {
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
                   Nationality:
                 </span>
-                <span>USA</span>
+                <span>Spanish</span>
               </li>
               <li className="m-0">
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
                   Study:
                 </span>
-                <span>Univercity of Texas</span>
+                <span>ESADE and IQS School of Engineering</span>
               </li>
               <li className="m-0">
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
                   Degree:
                 </span>
-                <span>Master</span>
+                <span>MBA and Master's degrees</span>
               </li>
               <li className="m-0">
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
                   Interest:
                 </span>
-                <span>Playing Football</span>
+                <span>Earger learner</span>
               </li>
               <li className="m-0">
                 <span className="min-w-[100px] float-left mr-[10px] font-bold text-black">
@@ -112,8 +120,8 @@ const Intro = () => {
         </div>
       </div>
       <div className="tokyo_tm_button" data-position="left">
-        <a href="assets/img/cv/1.jpg" download>
-          <span>Download CV</span>
+        <a href="https://www.linkedin.com/in/marquezalberto">
+          <span>Check my Profile in Linkedin</span>
         </a>
       </div>
     </Fragment>

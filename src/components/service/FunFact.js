@@ -1,7 +1,7 @@
 const DataFacts = [
   { id: 1, value: "15+", name: "Years of experience" },
   { id: 2, value: "56", name: "Countries visited" },
-  { id: 3, value: "3", name: "" },
+  { id: 3, value: "30+", name: "Customers managed" },
 ];
 
 const Facts = () => {

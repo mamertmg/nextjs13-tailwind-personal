@@ -3,34 +3,34 @@ import { TokyoContext } from "../Context";
 import SectionContainer from "./SectionContainer";
 import SectionTitle from "./SectionTitle";
 
-const news = [
+const StartupsInfo = [
   {
     id: 1,
-    title: "Format releases a new tool that enables direct video hosting",
-    image: "assets/img/news/1.jpg",
-    author: "Alex Watson",
-    date: "22 Oct 2022",
+    title: "Simplr is the first life-as-a-service platform designed for households and businesses to power the circular economy",
+    image: "assets/img/startups/simplr-logo.png",
+    funding_round: "Pre-seed",
+    date: "2020",
   },
   {
     id: 2,
-    title: "Sony announced two new full frame cameras with zero fanfare",
-    image: "assets/img/news/2.jpg",
-    author: "Brook Kennedy",
-    date: "15 Oct 2022",
+    title: "Incapto Coffee offers the sale of the automatic coffee machine and a subscription system for coffee beans.",
+    image: "assets/img/startups/incapto-coffee-logo.png",
+    funding_round: "Venture Round",
+    date: "2023",
   },
   {
     id: 3,
-    title: "Why every photographer should shoot film, even in 2022",
-    image: "assets/img/news/3.jpg",
-    author: "Paola Atkins",
-    date: "07 Oct 2022",
+    title: "HR Bot Factory is a human resources management company that promotes hassle-free and virtual recruitment.",
+    image: "assets/img/startups/hr-bot-factory-logo.png",
+    funding_round: "Private Equity Round",
+    date: "2022",
   },
   {
     id: 4,
-    title: "Stay creative in lockdown with these fun photo projects",
-    image: "assets/img/news/4.jpg",
-    author: "Kevin Stone",
-    date: "25 Sep 2022",
+    title: "Bcas is a Madrid based fintech unlocking access to quality education through student finance for students from all backgrounds.",
+    image: "assets/img/startups/bcas-logo.png",
+    funding_round: "Seed",
+    date: "2023",
   },
 ];
 
@@ -46,7 +46,7 @@ const Startups = () => {
             </div>
           </div>
           <ul className="ml-[-50px] list-none">
-            {news.map((item) => (
+            {StartupsInfo.map((item) => (
               <li
                 className="mb-[50px] float-left w-1/2 pl-[50px]"
                 key={item.id}
@@ -76,7 +76,6 @@ const Startups = () => {
                     <div className="extra flex items-center justify-between mb-[25px] relative">
                       <div className="short">
                         <p className="date font-montserrat text-[13px] text-[#767676]">
-                          By{" "}
                           <a
                             className="text-[#767676] transition-all duration-300 hover:text-black"
                             href="#"
@@ -85,7 +84,7 @@ const Startups = () => {
                               setNewsModal(item);
                             }}
                           >
-                            {item.author}
+                            {item.funding_round}
                           </a>{" "}
                           <span className="relative">{item.date}</span>
                         </p>

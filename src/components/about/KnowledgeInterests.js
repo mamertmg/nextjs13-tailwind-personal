@@ -1,16 +1,14 @@
 const knowledge = [
-  { id: 1, text: "Bootstrap, Angular" },
-  { id: 2, text: "React, Vue, Laravel" },
-  { id: 3, text: "Stylus, Sass, Less" },
-  { id: 4, text: "Gulp, Webpack, Grunt" },
-  { id: 5, text: "AWS Cloud Practitioner" },
+  { id: 1, text: "Thermoplastics" },
+  { id: 2, text: "Polyurethanes" },
+  { id: 3, text: "Sales and Account Management" },
+  { id: 4, text: "Industries: Automotive, E&E, Insulation, Appliances" },
+  { id: 5, text: "Web development and Cloud Technologies" },
 ];
 const interests = [
-  { id: 1, text: "Plastics / Polymers" },
-  { id: 2, text: "Sales and Account Management" },
-  { id: 3, text: "Sustainability" },
-  { id: 4, text: "Digitalization" },
-  { id: 5, text: "Startups" },
+  { id: 1, text: "Plastics Sustainability and Circularity" },
+  { id: 2, text: "Chemical Industry Digitalization" },
+  { id: 3, text: "Startups" }
 ];
 
 const KnowledgeInterests = () => {

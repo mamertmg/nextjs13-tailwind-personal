@@ -1,9 +1,10 @@
 const programming = [
   { id: 1, name: "Javascript / Typescript", value: 95 },
-  { id: 2, name: "React / NextJS", value: 80 },
+  { id: 2, name: "React / NextJS", value: 90 },
   { id: 3, name: "TailwindCSS", value: 90 },
-  { id: 3, name: "NodeJS / Express", value: 90 },
-  { id: 3, name: "AWS Cloud", value: 90 },
+  { id: 4, name: "NodeJS / Express", value: 75 },
+  { id: 5, name: "MySQL, MongoDB, Supabase, Firebase", value: 75 },
+  { id: 6, name: "AWS Cloud", value: 60 },
 ];
 const language = [
   { id: 1, name: "Spanish", value: 100 },
