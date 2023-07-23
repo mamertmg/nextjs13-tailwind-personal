@@ -19,8 +19,7 @@ const Layout = ({ children }) => {
     tokyo.imageToSvg();
     tokyo.customCursor();
   }, []);
-  const { modal, serviceModal, newsModal, portfolioDetailsModal } =
-    useContext(TokyoContext);
+  const { modal, serviceModal, newsModal, portfolioDetailsModal } = useContext(TokyoContext);
   return (
     <Fragment>
       <MediaPopup />
