@@ -9,7 +9,6 @@ const type = {
   ANIMATION: "ANIMATION",
   MODAL: "MODAL",
   SERVICEMODAL: "SERVICEMODAL",
-  NEWSMODAL: "NEWSMODAL",
   PORTFOLIODETAILSMODAL: "PORTFOLIODETAILSMODAL",
 };
 const {
@@ -17,7 +16,6 @@ const {
   ANIMATION,
   MODAL,
   SERVICEMODAL,
-  NEWSMODAL,
   PORTFOLIODETAILSMODAL,
 } = type;
 
@@ -27,7 +25,6 @@ const initialState = {
   animation: "fadeInLeft",
   modal: false,
   serviceModal: null,
-  newsModal: null,
   portfolioDetailsModal: null,
   menus: [
     { id: 1, name: "home", href: "home" },
@@ -62,11 +59,6 @@ const reducer = (state, action) => {
       return {
         ...state,
         serviceModal: payload,
-      };
-    case NEWSMODAL:
-      return {
-        ...state,
-        newsModal: payload,
       };
     case PORTFOLIODETAILSMODAL:
       return {
@@ -109,12 +101,6 @@ const TokyoState = ({ children }) => {
       payload: value,
     });
   }, []);
-  const setNewsModal = useCallback((value) => {
-    dispatch({
-      type: NEWSMODAL,
-      payload: value,
-    });
-  }, []);
   const setPortfolioDetailsModal = useCallback((value) => {
     dispatch({
       type: PORTFOLIODETAILSMODAL,
@@ -127,7 +113,6 @@ const TokyoState = ({ children }) => {
     animation,
     modal,
     serviceModal,
-    newsModal,
     portfolioDetailsModal,
     menus,
   } = state;
@@ -143,8 +128,6 @@ const TokyoState = ({ children }) => {
         modalToggle,
         serviceModal,
         setServiceModal,
-        newsModal,
-        setNewsModal,
         portfolioDetailsModal,
         setPortfolioDetailsModal,
       }}

@@ -1,5 +1,3 @@
-import { useContext } from "react";
-import { TokyoContext } from "../Context";
 import SectionContainer from "./SectionContainer";
 import SectionTitle from "./SectionTitle";
 
@@ -8,34 +6,38 @@ const StartupsInfo = [
     id: 1,
     title: "Simplr is the first life-as-a-service platform designed for households and businesses to power the circular economy",
     image: "assets/img/startups/simplr-logo.png",
-    funding_round: "Pre-seed",
-    date: "2020",
+    status: "Active",
+    date: "2021",
+    email:"https://www.simplr.io/"
   },
   {
     id: 2,
     title: "Incapto Coffee offers the sale of the automatic coffee machine and a subscription system for coffee beans.",
     image: "assets/img/startups/incapto-coffee-logo.png",
-    funding_round: "Venture Round",
-    date: "2023",
+    status: "Active",
+    date: "2021",
+    email:"https://incapto.com/"
   },
   {
     id: 3,
     title: "HR Bot Factory is a human resources management company that promotes hassle-free and virtual recruitment.",
     image: "assets/img/startups/hr-bot-factory-logo.png",
-    funding_round: "Private Equity Round",
-    date: "2022",
+    status: "Active",
+    date: "2021",
+    email: "https://www.hrbotfactory.com/"
   },
   {
     id: 4,
     title: "Bcas is a Madrid based fintech unlocking access to quality education through student finance for students from all backgrounds.",
     image: "assets/img/startups/bcas-logo.png",
-    funding_round: "Seed",
+    status: "Active",
     date: "2023",
+    email:"https://bcasapp.com/"
   },
 ];
 
 const Startups = () => {
-  const { setNewsModal, modalToggle } = useContext(TokyoContext);
+
   return (
     <SectionContainer name={"startups"}>
       <div className="container">
@@ -65,54 +67,26 @@ const Startups = () => {
                     />
                     <a
                       className="tokyo_tm_full_link"
-                      href="#"
-                      onClick={() => {
-                        modalToggle(true);
-                        setNewsModal(item);
-                      }}
+                      href={item.email}
                     />
                   </div>
                   <div className="details w-full float-left px-[40px] pt-[30px] pb-[25px] bg-white transition-all duration-300">
                     <div className="extra flex items-center justify-between mb-[25px] relative">
                       <div className="short">
                         <p className="date font-montserrat text-[13px] text-[#767676]">
-                          <a
-                            className="text-[#767676] transition-all duration-300 hover:text-black"
-                            href="#"
-                            onClick={() => {
-                              modalToggle(true);
-                              setNewsModal(item);
-                            }}
-                          >
-                            {item.funding_round}
-                          </a>{" "}
-                          <span className="relative">{item.date}</span>
+                          {item.status}
+                          <span className="relative">Invested in {item.date}</span>
                         </p>
                       </div>
                     </div>
                     <h3 className="title mb-[10px] leading-[1.4]">
                       <a
                         className="text-black text-[18px] font-semibold inline-block transition-all duration-300 hover:text-black"
-                        href="#"
-                        onClick={() => {
-                          modalToggle(true);
-                          setNewsModal(item);
-                        }}
+                        href={item.email}
                       >
                         {item.title}
                       </a>
                     </h3>
-                    <div className="tokyo_tm_read_more">
-                      <a
-                        href="#"
-                        onClick={() => {
-                          modalToggle(true);
-                          setNewsModal(item);
-                        }}
-                      >
-                        <span>Read More</span>
-                      </a>
-                    </div>
                   </div>
                 </div>
               </li>

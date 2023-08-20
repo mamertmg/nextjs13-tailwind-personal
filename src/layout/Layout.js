@@ -5,7 +5,6 @@ import Mobile from "@/src/layout/Mobile";
 import Sidebar from "@/src/layout/Sidebar";
 import { tokyo } from "@/src/utils";
 import ImageView from "components/popup/ImageView";
-import NewsModal from "components/popup/NewsModal";
 import ServiceModal from "components/popup/ServiceModal";
 import dynamic from "next/dynamic";
 import { Fragment, useContext, useEffect } from "react";
@@ -20,12 +19,11 @@ const Layout = ({ children }) => {
     tokyo.imageToSvg();
     tokyo.customCursor();
   }, []);
-  const { modal, serviceModal, newsModal, portfolioDetailsModal } = useContext(TokyoContext);
+  const { modal, serviceModal, portfolioDetailsModal } = useContext(TokyoContext);
   return (
     <Fragment>
       <ImageView />
       {modal && serviceModal && <ServiceModal />}
-      {modal && newsModal && <NewsModal />}
       {modal && portfolioDetailsModal && <DetailsModal />}
       {/* WRAPPER ALL */}
       <div className="tokyo_tm_all_wrap">

@@ -1,9 +1,10 @@
 import { TokyoContext } from "@/src/Context";
 import { useContext } from "react";
 import ModalContainer from "./ModalContainer";
+
 const DetailsModal = () => {
-  const { portfolioDetailsModal, setPortfolioDetailsModal } =
-    useContext(TokyoContext);
+  const { portfolioDetailsModal, setPortfolioDetailsModal } = useContext(TokyoContext);
+
   return (
     <ModalContainer nullValue={setPortfolioDetailsModal}>
       <div className="popup_details">
