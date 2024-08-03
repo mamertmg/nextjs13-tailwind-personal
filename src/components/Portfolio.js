@@ -44,7 +44,7 @@ const Portfolio = () => {
             <div className="title_flex w-full h-auto clear-both flex justify-between items-end">
               <SectionTitle
                 pageName={"Portfolio"}
-                title={"Web development Portfolio"}
+                title={"Web development examples"}
               />
 
             </div>

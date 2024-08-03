@@ -2,7 +2,7 @@ const experiencesData = [
   {
     id: 1,
     date: "2020 - Now",
-    designation: "EMEA Account Manager E&E",
+    designation: "EMEA Account Manager",
     company: "SABIC",
   },
   {
