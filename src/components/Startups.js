@@ -6,7 +6,7 @@ const StartupsInfo = [
     id: 1,
     title: "Simplr is the first life-as-a-service platform designed for households and businesses to power the circular economy",
     image: "assets/img/startups/simplr-logo.png",
-    status: "Active",
+    status: "Not active",
     date: "2021",
     email:"https://www.simplr.io/"
   },
@@ -33,6 +33,14 @@ const StartupsInfo = [
     status: "Active",
     date: "2023",
     email:"https://bcasapp.com/"
+  },
+  {
+    id: 4,
+    title: "Simplify the management of your rental properties with Nester",
+    image: "assets/img/startups/nester.png",
+    status: "Active",
+    date: "2024",
+    email:"https://www.nestersoftware.com/"
   },
 ];
 

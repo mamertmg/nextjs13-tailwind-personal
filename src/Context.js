@@ -28,10 +28,10 @@ const initialState = {
   portfolioDetailsModal: null,
   menus: [
     { id: 1, name: "home", href: "home" },
-    { id: 2, name: "about", href: "about" },
-    { id: 3, name: "services", href: "services" },
-    { id: 4, name: "portfolio", href: "portfolio" },
-    { id: 5, name: "startups", href: "startups" },
+    { id: 2, name: "about me", href: "about" },
+    { id: 3, name: "professional", href: "services" },
+    { id: 4, name: "web development", href: "portfolio" },
+    { id: 5, name: "startups inverstor", href: "startups" },
     { id: 6, name: "contact", href: "contact" },
   ],
 };

@@ -1,5 +1,5 @@
 const DataFacts = [
-  { id: 1, value: "15+", name: "Years of experience" },
+  { id: 1, value: "16+", name: "Years of experience" },
   { id: 2, value: "30+", name: "Customers managed" },
   { id: 3, value: "56", name: "Countries visited" },
 ];
